@@ -11,7 +11,7 @@ const Brand = () => {
                     Juan Luis Vazquez
                 </span>
                 <span className="surname">
-                    <Typewriter steps={['Full-Stack Software Engineer', 1000]}/>
+                    <Typewriter steps={['Full-Stack Software Engineer', 2000]}/>
                 </span>
             </div>
         </div>
