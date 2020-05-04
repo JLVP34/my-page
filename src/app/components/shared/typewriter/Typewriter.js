@@ -3,14 +3,17 @@ import { type } from '@camwiegert/typical';
 
 import styles from './styles.module.css'
 
-const Typewriter = ({ steps }) => {
-  const ref = createRef();
+const Typewriter = ({ label, millis, callback }) => {
   const [classNames, setClassNames] = useState([styles.typicalWrapper]);
+  const [ref,] = useState(createRef());
 
   useEffect(() => {
-      type(ref.current, ...steps)
-      .then(() => setClassNames([]));
-  });
+      type(ref.current, ...[label, millis])
+      .then(() => {
+        setClassNames([]);
+        callback();
+      });
+  }, [label, millis, ref, callback]);
 
   return <p ref={ref} className={classNames.join(' ')}/>;
 }

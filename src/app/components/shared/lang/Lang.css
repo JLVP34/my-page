@@ -1,0 +1,40 @@
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 800px) {
+    .language {
+        position: absolute;
+        right: 0;
+        margin: 1.2em;
+        z-index: 1;
+
+        animation: fadeIn ease 0.5s;
+    }
+
+    .flag {
+        width: 3em;
+        height: 2em;
+
+        text-align: center;
+
+        padding: 0.3em;
+        border: solid grey 0.15em;
+        border-radius: 0.5em;
+
+        transform: scale(0.85);
+        user-select: none;
+    }
+
+    .flag:hover {
+        background: rgb(60, 60, 60);
+        cursor: pointer;
+    }
+
+    .flag:active {
+        background: rgb(75, 75, 75);
+        cursor: pointer;
+    }
+
+}
