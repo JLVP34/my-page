@@ -5,7 +5,7 @@ import './Lang.css';
 const Lang = () => (
     <div className="language">
         <div className="flag">
-            <img alt="Español" src="https://www.countryflags.io/es/flat/32.png"/>
+            <img alt="Español" src="images/flags/gb.svg"/>
         </div>
     </div>
 );
