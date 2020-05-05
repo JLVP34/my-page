@@ -4,7 +4,7 @@ import { type } from '@camwiegert/typical';
 import styles from './styles.module.css'
 
 const Typewriter = ({ label, millis, callback }) => {
-  const [classNames, setClassNames] = useState([styles.typicalWrapper]);
+  const [classNames, setClassNames] = useState([styles.typewriter]);
   const [ref,] = useState(createRef());
 
   useEffect(() => {

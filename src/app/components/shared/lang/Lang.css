@@ -25,9 +25,7 @@
         user-select: none;
     }
 
-    .language:hover > .flag,
-    .language:active > .flag {
-        animation: borderFade ease 2s;
+    .language:hover > .flag {
         border: solid white .3em;
     }
 

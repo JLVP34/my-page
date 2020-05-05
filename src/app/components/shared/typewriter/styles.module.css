@@ -1,4 +1,4 @@
-.typicalWrapper::after {
+.typewriter::after {
     content: "|";
     animation: blink 1s infinite step-start;
 }
