@@ -21,11 +21,61 @@
         border: solid grey .3em;
         border-radius: 50%;
 
-        transform: scale(0.7);
+        transform: scale(.7);
         user-select: none;
     }
 
-    .language:hover > .flag {
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+        pointer-events: none;
+    }
+
+    .modal.shown {
+        display: block;
+    }
+
+    .flag-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .selector {
+        display: none;
+    }
+
+    .selector.shown {
+        display: block;
+        position: fixed;
+        color: black;
+        background: lightgrey;
+        padding: 0.5em;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        
+        border-radius: 0.5em;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0.3em;
+        user-select: none;
+    }
+
+    .flag:hover {
         border: solid white .3em;
     }
 
