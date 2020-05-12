@@ -1,0 +1,43 @@
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 800px) {
+    .github {
+        position: fixed;
+        left: 0;
+        margin: 1.2em;
+        z-index: 1;
+
+        width: 48px;
+        height: 48px;
+
+        animation: fadeIn ease 0.5s;
+    }
+
+    .github-icon {
+        position: relative;
+        box-sizing: border-box;
+        height: 75%;
+        width: 75%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(178deg) brightness(103%) contrast(102%);
+
+        border: solid grey .2em;
+        border-radius: 50%;
+    }
+
+    .github-icon:hover {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border: solid black .2em;
+    }
+}
