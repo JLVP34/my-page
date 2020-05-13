@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { Fragment, useState } from 'react';
 
-import First from './pages/flow/first/First';
+import Sections from './pages/sections/Sections';
 import Lang from './components/shared/lang/Lang';
 import Github from './components/shared/github/Github';
 
@@ -12,11 +12,11 @@ const Flow = () => {
   };
 
   return (
-    <div>
+    <Fragment>
       {typed ? <Github/>: null}
       {typed ? <Lang/> : null}
-      <First typeCallback={typeCompleted}/>
-    </div>
+      <Sections typeCallback={typeCompleted}/>
+    </Fragment>
   );
 }
 

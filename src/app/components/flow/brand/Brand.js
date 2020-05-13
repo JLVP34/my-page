@@ -1,11 +1,11 @@
 import React from 'react';
-import Typewriter from '../../../shared/typewriter/Typewriter';
+import Typewriter from '../../shared/typewriter/Typewriter';
 
 import './Brand.css';
 
 const Brand = ({ typeCallback }) => {
     return (
-        <div className="container">
+        <section className="brand">
             <div className="label">
                 <span className="name">
                     Juan Luis Vazquez
@@ -14,7 +14,7 @@ const Brand = ({ typeCallback }) => {
                     <Typewriter label={'Full-Stack Software Engineer'} millis={2000} callback={typeCallback}/>
                 </span>
             </div>
-        </div>
+        </section>
     );
 };
 
