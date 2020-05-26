@@ -7,11 +7,11 @@ const languages = [
     {id: 'es', name: 'Español'}
 ];
 
-const Lang = () => {
-    const [lang, setLang] = useState('gb');
+const Lang = ({ language, langCallback }) => {
+    const [lang, setLang] = useState(language);
     const [shown, setShown] = useState(false);
 
-    const onClickFlag = () => {
+    const onClickFlag = () => { 
         if (!shown) setShown(true);
     };
 
@@ -20,7 +20,8 @@ const Lang = () => {
     };
 
     const onSelectLang = (newLang) => {
-        if (lang !== newLang) setLang(newLang); 
+        if (lang !== newLang) setLang(newLang);
+        langCallback(newLang);
         onHideShown();
     };
 

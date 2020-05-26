@@ -3,17 +3,18 @@ import { type } from '@camwiegert/typical';
 
 import styles from './styles.module.css'
 
-const Typewriter = ({ label, millis, callback }) => {
+const Typewriter = ({ label, callback }) => {
   const [classNames, setClassNames] = useState([styles.typewriter]);
   const [ref,] = useState(createRef());
 
   useEffect(() => {
-      type(ref.current, ...[label, millis])
-      .then(() => {
-        setClassNames([]);
-        callback();
-      });
-  }, [label, millis, ref, callback]);
+    setClassNames([styles.typewriter]);
+    type(ref.current, ...[label, 1000])
+    .then(() => {
+      setClassNames([]);
+      callback();
+    });
+  }, [label, ref, callback]);
 
   return <p ref={ref} className={classNames.join(' ')}/>;
 }

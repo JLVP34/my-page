@@ -1,0 +1,53 @@
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 800px) {
+    .summary {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(to bottom, #006600, #ffffff 20%);
+    }
+
+    .summary-text {
+        position: relative;
+        top: 20%;
+    }
+
+    .summary-block {
+        padding: 1em 2em; 
+        animation: fadeIn ease 0.5s;
+    }
+
+    .summary-block.first {
+        padding: 1em 2em;
+        font-size: 1.75em;
+    }
+
+    .summary-block.second {
+        text-align: right;
+        padding: 1em 2em;
+        font-size: 1.5em;
+    }
+
+    .summary-block.third {
+        padding: 1em 2em;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .name {
+        font-size: 2.3em;
+        margin-bottom: 0.7em;
+    }
+
+    .surname {
+        font-size: 0.9em;
+    }
+}

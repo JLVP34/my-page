@@ -1,17 +1,27 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import Typewriter from '../../shared/typewriter/Typewriter';
+import onScroll from '../../shared/functions/effect/onScroll';
 
 import './Brand.css';
 
-const Brand = ({ typeCallback }) => {
+const BRAND_CLASS = 'brand';
+
+const Brand = ({ typeCallback, langChanged }) => {
+    const { t } = useTranslation();
+    onScroll(BRAND_CLASS);
+
     return (
-        <section className="brand">
+        <section className={BRAND_CLASS}>
             <div className="label">
                 <span className="name">
                     Juan Luis Vazquez
                 </span>
                 <span className="surname">
-                    <Typewriter label={'Full-Stack Software Engineer'} millis={2000} callback={typeCallback}/>
+                    {langChanged ?
+                        <p>{t('brandLabel')}</p> :
+                        <Typewriter label={t('brandLabel')} callback={typeCallback}/>}
                 </span>
             </div>
         </section>

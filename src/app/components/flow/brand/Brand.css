@@ -13,8 +13,15 @@
         height: 100%;
 
         background: linear-gradient(0deg, #006600, #000000);
-        background-size: 100% 120%;
-        animation: background-animation 15s ease infinite;
+        background-size: 100% 150%;
+        animation: background-animation 10s ease infinite;
+    }
+
+    .brand.scroll {
+        animation: none;
+
+        background-position: 0% 100%;
+        transition: 2s;
     }
 
     .label {
@@ -39,6 +46,7 @@
 
     .surname {
         display: block;
+        color: white;
 
         font-family: 'Source Code Pro';
         font-style: normal;
